@@ -16,11 +16,11 @@ def create_task():                      # Função para criar a atividade
     task_id_control += 1
     tasks.append(new_task)
     print(tasks)
-<<<<<<< HEAD
+
     return jsonify({"message":"Nova tarefa criada com sucesso", "id": new_task.id})            #Aqui vai me retornar a mensagem em json
-=======
+
     return jsonify({"message":"Nova tarefa criada com sucesso"})            #Aqui vai me retornar a mensagem em json
->>>>>>> a7ac2382518da44eb591afca1b5f69e41f958f4b
+
 
 @app.route('/tasks', methods=['GET'])
 def get_tasks():                            # Função para retornar todas as minhas atividades.
@@ -73,7 +73,3 @@ def delete_task(id):
 
 if __name__ == "__main__":
     app.run(debug=True)
-<<<<<<< HEAD
-
-=======
->>>>>>> a7ac2382518da44eb591afca1b5f69e41f958f4b

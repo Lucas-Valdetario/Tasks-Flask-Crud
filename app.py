@@ -19,9 +19,6 @@ def create_task():                      # Função para criar a atividade
 
     return jsonify({"message":"Nova tarefa criada com sucesso", "id": new_task.id})            #Aqui vai me retornar a mensagem em json
 
-    return jsonify({"message":"Nova tarefa criada com sucesso"})            #Aqui vai me retornar a mensagem em json
-
-
 @app.route('/tasks', methods=['GET'])
 def get_tasks():                            # Função para retornar todas as minhas atividades.
     task_list = [task.to_dict() for task in tasks]      # Nessa parte o comando for vai me retornar tudo no comando to_dict para trazer em dicionário

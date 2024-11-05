@@ -1,18 +1,3 @@
-from flask import Flask
-# __name__ = "__main__"
-app = Flask(__name__)
-
-@app.route("/")
-def hello_world():
-    return "Hello_world"
-
-@app.route("/about")
-def about():
-    return "Página sobre"
-
-if __name__ == "__main__":
-    app.run(debug=True)
-
 from flask import Flask, request, jsonify
 from models.task import Task
 # __name__ = "__main__"
@@ -31,7 +16,7 @@ def create_task():                      # Função para criar a atividade
     task_id_control += 1
     tasks.append(new_task)
     print(tasks)
-    return jsonify({"message":"Nova tarefa criada com sucesso"})            #Aqui vai me retornar a mensagem em json
+    return jsonify({"message":"Nova tarefa criada com sucesso", "id": new_task.id})            #Aqui vai me retornar a mensagem em json
 
 @app.route('/tasks', methods=['GET'])
 def get_tasks():                            # Função para retornar todas as minhas atividades.
